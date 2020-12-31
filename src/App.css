@@ -1,0 +1,142 @@
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#scene {
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  z-index: 2;
+}
+
+.frame__title {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+}
+
+
+
+.frame__links {
+  margin: 1rem 0;
+}
+
+.frame__link:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.frame__nav .frame__link:first-child {
+  margin-right: 1.5rem;
+}
+
+.bottom-left {
+  padding: 1.5rem;
+  transform: translate3d(0, -100%, 0) !important;
+}
+
+.canvas > div {
+  z-index: 10000000;
+}
+
+@media screen and (min-width: 53em) {
+	
+	.frame {
+    display: grid;
+    height: 100vh;
+    padding: 2rem 3.7rem;
+    pointer-events: none;
+		align-content: space-between;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: 'title links'
+							'... ...'
+							'... nav';
+	}
+	.frame__title {
+    grid-area: title;
+    color: #fff;
+	}
+	.frame__links {
+		grid-area: links;
+    justify-self: end;
+    margin: 0;
+  }
+  .frame__link {
+    pointer-events: auto;
+  }
+  .frame__nav {
+    grid-area: nav;
+		justify-self: end;
+  }
+  .bottom-left {
+    padding: 0 0 2rem 3.7rem;
+  }
+}
+
+a {
+  color: #545454;
+  text-decoration: none;
+}
+
+a:focus, 
+a:hover {
+  color: #8b8b8b;
+}
+
+
+.text__container {
+  position: relative;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+width: 100%;
+text-align: center;
+
+  overflow: hidden;
+}
+
+.moving__text {
+  position: absolute;
+
+  font-family: 'Playfair Display SC', serif;
+  font-size: 125px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
