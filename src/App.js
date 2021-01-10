@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div className="frame">
-        <h1 className="frame__title">Ribbons</h1>
+        <h1 className="frame__title">Twirl</h1>
         <div className="frame__links"></div>
         <div className="frame__nav">
           <a
@@ -19,7 +19,7 @@ function App() {
           </a>
           <a
             className="frame__link"
-            href="https://github.com/isengupt/ribbons/"
+            href="https://github.com/isengupt/twirl"
           >
             GitHub
           </a>
